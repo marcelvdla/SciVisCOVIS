@@ -3,7 +3,7 @@ Repo for the SVVR project on COVIS data
 
 Members:
 
-* Marcel van de Lagemaat
+* Marcel van de Lagemaat (10886699)
 * Jonathan Meeng
 
 # Python Setup

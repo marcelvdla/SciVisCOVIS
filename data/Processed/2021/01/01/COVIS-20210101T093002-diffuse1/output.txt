@@ -1,0 +1,32 @@
+Processing data from COVIS-20210101T093002-diffuse1
+Processing COVIS archive /tmp/tmpi96ee0n0/COVIS-20210101T093002-diffuse1 to path /tmp/tmpi96ee0n0/output
+Processing input file: /tmp/tmpi96ee0n0/COVIS-20210101T093002-diffuse1
+            to output: /tmp/tmpi96ee0n0/output/COVIS-20210101T093002-diffuse1.mat
+now processing diffuse-flow file: COVIS-20210101T093002-diffuse1
+Warning: there are 2 bin files missing in the sweepParsing /tmp/covis2so1v89r/COVIS-20210101T093002-diffuse1/index.csv
+Warning: error reading ping 126
+Warning: error in filtering ping: 126
+
+covis =
+
+  struct with fields:
+
+          type: 'diffuse'
+      comments: 'ASHES at Axial'
+          user: [1x1 struct]
+         sonar: [1x1 struct]
+    processing: [1x1 struct]
+          grid: {1x7 cell}
+       release: "3.2.0"
+         sweep: [1x1 struct]
+          ping: [1x159 struct]
+      bad_ping: 126
+
+
+output =
+
+  0x0 empty cell array
+
+Metadata file: /tmp/tmpi96ee0n0/output/metadata.json
+Uploaded COVIS-20210101T093002-diffuse1.mat to bucket postprocessed, path Version3.2_automatic/2021/01/01/COVIS-20210101T093002-diffuse1/COVIS-20210101T093002-diffuse1.mat
+Uploaded metadata.json to bucket postprocessed, path Version3.2_automatic/2021/01/01/COVIS-20210101T093002-diffuse1/metadata.json
