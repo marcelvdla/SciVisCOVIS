@@ -1,0 +1,880 @@
+Processing data from COVIS-20210103T140002-fullimaging1
+Processing COVIS archive /tmp/tmpqp9i3nbx/COVIS-20210103T140002-fullimaging1 to path /tmp/tmpqp9i3nbx/output
+Processing input file: /tmp/tmpqp9i3nbx/COVIS-20210103T140002-fullimaging1
+            to output: /tmp/tmpqp9i3nbx/output/COVIS-20210103T140002-imaging1.mat
+  Processing file as full imaging
+now processing full imaging file: COVIS-20210103T140002-fullimaging1
+Warning: there are 104 bin files missing in the sweepParsing /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/index.csv
+Burst 1: pitch=-42.800000, npings=18, start_ping=1
+Burst 2: pitch=-41.800000, npings=9, start_ping=21
+Burst 3: pitch=-40.800000, npings=9, start_ping=31
+Burst 4: pitch=-39.800000, npings=9, start_ping=41
+Burst 5: pitch=-38.800000, npings=9, start_ping=51
+Burst 6: pitch=-37.800000, npings=9, start_ping=61
+Burst 7: pitch=-36.800000, npings=9, start_ping=71
+Burst 8: pitch=-35.800000, npings=9, start_ping=81
+Burst 9: pitch=-34.800000, npings=9, start_ping=91
+Burst 10: pitch=-33.800000, npings=9, start_ping=101
+Burst 11: pitch=-32.800000, npings=9, start_ping=111
+Burst 12: pitch=-31.800000, npings=9, start_ping=121
+Burst 13: pitch=-30.800000, npings=9, start_ping=131
+Burst 14: pitch=-29.800000, npings=9, start_ping=141
+Burst 15: pitch=-28.800000, npings=9, start_ping=151
+Burst 16: pitch=-27.800000, npings=9, start_ping=161
+Burst 17: pitch=-26.800000, npings=9, start_ping=171
+Burst 18: pitch=-25.800000, npings=9, start_ping=181
+Burst 19: pitch=-24.800000, npings=9, start_ping=191
+Burst 20: pitch=-23.800000, npings=9, start_ping=201
+Burst 21: pitch=-22.800000, npings=9, start_ping=211
+Burst 22: pitch=-21.800000, npings=9, start_ping=221
+Burst 23: pitch=-20.800000, npings=9, start_ping=231
+Burst 24: pitch=-19.800000, npings=9, start_ping=241
+Burst 25: pitch=-18.800000, npings=9, start_ping=251
+Burst 26: pitch=-17.800000, npings=9, start_ping=261
+Burst 27: pitch=-16.900000, npings=9, start_ping=271
+Burst 28: pitch=-15.800000, npings=9, start_ping=281
+Burst 29: pitch=-14.800000, npings=9, start_ping=291
+Burst 30: pitch=-13.800000, npings=9, start_ping=301
+Burst 31: pitch=-12.800000, npings=9, start_ping=311
+Burst 32: pitch=-11.900000, npings=9, start_ping=321
+Burst 33: pitch=-10.800000, npings=9, start_ping=331
+Burst 34: pitch=-9.900000, npings=9, start_ping=341
+Burst 35: pitch=-8.900000, npings=9, start_ping=351
+Burst 36: pitch=-7.900000, npings=9, start_ping=361
+Burst 37: pitch=-6.900000, npings=9, start_ping=371
+Burst 38: pitch=-5.900000, npings=9, start_ping=381
+Burst 39: pitch=-4.900000, npings=9, start_ping=391
+Burst 40: pitch=-3.900000, npings=9, start_ping=401
+Burst 41: pitch=-2.900000, npings=9, start_ping=411
+Burst 42: pitch=-1.900000, npings=9, start_ping=421
+Burst 43: pitch=-0.900000, npings=9, start_ping=431
+Burst 44: pitch=0.100000, npings=9, start_ping=441
+Burst 45: pitch=1.100000, npings=9, start_ping=451
+Burst 46: pitch=2.100000, npings=9, start_ping=461
+Burst 47: pitch=3.100000, npings=9, start_ping=471
+Burst 48: pitch=4.100000, npings=9, start_ping=481
+Burst 49: pitch=5.100000, npings=9, start_ping=491
+Burst 50: pitch=6.100000, npings=9, start_ping=501
+Burst 51: pitch=7.100000, npings=9, start_ping=511
+Burst 52: pitch=8.100000, npings=9, start_ping=521
+Burst 53: pitch=9.100000, npings=9, start_ping=531
+Burst 54: pitch=10.100000, npings=9, start_ping=541
+Burst 55: pitch=11.100000, npings=9, start_ping=551
+Burst 56: pitch=12.100000, npings=9, start_ping=561
+Burst 57: pitch=13.100000, npings=9, start_ping=571
+Burst 58: pitch=14.000000, npings=9, start_ping=581
+Burst 59: pitch=15.000000, npings=9, start_ping=591
+Burst 60: pitch=16.000000, npings=9, start_ping=601
+Burst 61: pitch=17.000000, npings=9, start_ping=611
+Burst 62: pitch=18.000000, npings=9, start_ping=621
+Burst 63: pitch=19.000000, npings=9, start_ping=631
+Burst 64: pitch=20.000000, npings=9, start_ping=641
+Burst 65: pitch=21.000000, npings=9, start_ping=651
+Burst 66: pitch=22.000000, npings=9, start_ping=661
+Burst 67: pitch=23.000000, npings=9, start_ping=671
+Burst 68: pitch=23.900000, npings=9, start_ping=681
+Burst 69: pitch=24.900000, npings=9, start_ping=691
+Burst 70: pitch=25.900000, npings=9, start_ping=701
+Burst 71: pitch=26.900000, npings=9, start_ping=711
+Burst 72: pitch=27.900000, npings=9, start_ping=721
+Burst 73: pitch=28.900000, npings=9, start_ping=731
+Burst 74: pitch=29.900000, npings=9, start_ping=741
+Burst 75: pitch=30.900000, npings=9, start_ping=751
+Burst 76: pitch=31.900000, npings=9, start_ping=761
+Burst 77: pitch=32.800000, npings=9, start_ping=771
+Burst 78: pitch=33.800000, npings=9, start_ping=781
+Burst 79: pitch=34.800000, npings=9, start_ping=791
+Burst 80: pitch=35.800000, npings=9, start_ping=801
+Burst 81: pitch=36.800000, npings=9, start_ping=811
+Burst 82: pitch=37.700000, npings=9, start_ping=821
+Burst 83: pitch=38.700000, npings=9, start_ping=831
+Burst 84: pitch=39.700000, npings=9, start_ping=841
+Burst 85: pitch=40.700000, npings=9, start_ping=851
+Burst 86: pitch=41.700000, npings=9, start_ping=861
+Burst 87: pitch=42.700000, npings=9, start_ping=871
+Burst 88: pitch=43.600000, npings=9, start_ping=881
+Burst 89: pitch=44.600000, npings=9, start_ping=891
+Burst 90: pitch=45.600000, npings=9, start_ping=901
+Burst 91: pitch=46.600000, npings=9, start_ping=911
+Burst 92: pitch=47.600000, npings=9, start_ping=921
+Burst 93: pitch=48.500000, npings=9, start_ping=931
+Burst 94: pitch=49.500000, npings=9, start_ping=941
+Burst 95: pitch=50.500000, npings=9, start_ping=951
+Burst 96: pitch=51.400000, npings=9, start_ping=961
+Burst 97: pitch=52.400000, npings=9, start_ping=971
+Burst 98: pitch=53.400000, npings=9, start_ping=981
+Burst 99: pitch=54.400000, npings=9, start_ping=991
+Burst 100: pitch=55.300000, npings=9, start_ping=1001
+Burst 101: pitch=56.300000, npings=9, start_ping=1011
+Burst 102: pitch=57.200000, npings=9, start_ping=1021
+Burst 34: pitch -9.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000341.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000342.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000343.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000344.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000345.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000346.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000347.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000348.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000349.bin
+Burst 35: pitch -8.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000351.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000352.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000353.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000354.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000355.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000356.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000357.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000358.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000359.bin
+Burst 36: pitch -7.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000361.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000362.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000363.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000364.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000365.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000366.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000367.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000368.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000369.bin
+Burst 37: pitch -6.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000371.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000372.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000373.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000374.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000375.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000376.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000377.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000378.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000379.bin
+Burst 38: pitch -5.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000381.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000382.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000383.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000384.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000385.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000386.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000387.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000388.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000389.bin
+Burst 39: pitch -4.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000391.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000392.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000393.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000394.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000395.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000396.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000397.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000398.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000399.bin
+Burst 40: pitch -3.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000401.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000402.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000403.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000404.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000405.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000406.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000407.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000408.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000409.bin
+Burst 41: pitch -2.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000411.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000412.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000413.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000414.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000415.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000416.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000417.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000418.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000419.bin
+Burst 42: pitch -1.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000421.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000422.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000423.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000424.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000425.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000426.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000427.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000428.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000429.bin
+Burst 43: pitch -0.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000431.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000432.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000433.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000434.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000435.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000436.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000437.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000438.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000439.bin
+Burst 44: pitch 0.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000441.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000442.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000443.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000444.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000445.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000446.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000447.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000448.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000449.bin
+Burst 45: pitch 1.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000451.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000452.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000453.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000454.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000455.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000456.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000457.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000458.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000459.bin
+Burst 46: pitch 2.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000461.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000462.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000463.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000464.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000465.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000466.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000467.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000468.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000469.bin
+Burst 47: pitch 3.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000471.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000472.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000473.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000474.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000475.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000476.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000477.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000478.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000479.bin
+Burst 48: pitch 4.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000481.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000482.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000483.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000484.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000485.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000486.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000487.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000488.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000489.bin
+Burst 49: pitch 5.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000491.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000492.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000493.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000494.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000495.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000496.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000497.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000498.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000499.bin
+Burst 50: pitch 6.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000501.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000502.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000503.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000504.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000505.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000506.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000507.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000508.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000509.bin
+Burst 51: pitch 7.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000511.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000512.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000513.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000514.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000515.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000516.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000517.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000518.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000519.bin
+Burst 52: pitch 8.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000521.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000522.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000523.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000524.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000525.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000526.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000527.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000528.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000529.bin
+Burst 53: pitch 9.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000531.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000532.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000533.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000534.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000535.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000536.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000537.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000538.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000539.bin
+Burst 54: pitch 10.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000541.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000542.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000543.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000544.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000545.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000546.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000547.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000548.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000549.bin
+Burst 55: pitch 11.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000551.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000552.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000553.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000554.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000555.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000556.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000557.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000558.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000559.bin
+Burst 56: pitch 12.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000561.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000562.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000563.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000564.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000565.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000566.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000567.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000568.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000569.bin
+Burst 57: pitch 13.100000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000571.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000572.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000573.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000574.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000575.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000576.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000577.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000578.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000579.bin
+Burst 58: pitch 14.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000581.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000582.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000583.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000584.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000585.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000586.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000587.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000588.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000589.bin
+Burst 59: pitch 15.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000591.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000592.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000593.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000594.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000595.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000596.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000597.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000598.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000599.bin
+Burst 60: pitch 16.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000601.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000602.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000603.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000604.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000605.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000606.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000607.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000608.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000609.bin
+Burst 61: pitch 17.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000611.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000612.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000613.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000614.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000615.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000616.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000617.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000618.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000619.bin
+Burst 62: pitch 18.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000621.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000622.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000623.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000624.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000625.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000626.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000627.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000628.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000629.bin
+Burst 63: pitch 19.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000631.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000632.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000633.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000634.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000635.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000636.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000637.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000638.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000639.bin
+Burst 64: pitch 20.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000641.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000642.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000643.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000644.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000645.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000646.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000647.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000648.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000649.bin
+Burst 65: pitch 21.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000651.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000652.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000653.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000654.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000655.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000656.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000657.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000658.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000659.bin
+Burst 66: pitch 22.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000661.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000662.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000663.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000664.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000665.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000666.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000667.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000668.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000669.bin
+Burst 67: pitch 23.000000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000671.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000672.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000673.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000674.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000675.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000676.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000677.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000678.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000679.bin
+Burst 68: pitch 23.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000681.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000682.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000683.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000684.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000685.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000686.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000687.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000688.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000689.bin
+Burst 69: pitch 24.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000691.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000692.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000693.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000694.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000695.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000696.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000697.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000698.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000699.bin
+Burst 70: pitch 25.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000701.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000702.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000703.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000704.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000705.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000706.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000707.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000708.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000709.bin
+Burst 71: pitch 26.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000711.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000712.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000713.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000714.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000715.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000716.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000717.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000718.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000719.bin
+Burst 72: pitch 27.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000721.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000722.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000723.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000724.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000725.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000726.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000727.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000728.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000729.bin
+Burst 73: pitch 28.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000731.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000732.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000733.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000734.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000735.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000736.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000737.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000738.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000739.bin
+Burst 74: pitch 29.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000741.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000742.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000743.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000744.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000745.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000746.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000747.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000748.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000749.bin
+Burst 75: pitch 30.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000751.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000752.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000753.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000754.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000755.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000756.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000757.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000758.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000759.bin
+Burst 76: pitch 31.900000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000761.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000762.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000763.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000764.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000765.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000766.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000767.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000768.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000769.bin
+Burst 77: pitch 32.800000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000771.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000772.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000773.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000774.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000775.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000776.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000777.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000778.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000779.bin
+Burst 78: pitch 33.800000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000781.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000782.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000783.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000784.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000785.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000786.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000787.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000788.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000789.bin
+Burst 79: pitch 34.800000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000791.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000792.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000793.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000794.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000795.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000796.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000797.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000798.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000799.bin
+Burst 80: pitch 35.800000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000801.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000802.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000803.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000804.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000805.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000806.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000807.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000808.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000809.bin
+Burst 81: pitch 36.800000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000811.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000812.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000813.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000814.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000815.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000816.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000817.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000818.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000819.bin
+Burst 82: pitch 37.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000821.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000822.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000823.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000824.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000825.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000826.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000827.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000828.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000829.bin
+Burst 83: pitch 38.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000831.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000832.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000833.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000834.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000835.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000836.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000837.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000838.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000839.bin
+Burst 84: pitch 39.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000841.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000842.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000843.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000844.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000845.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000846.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000847.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000848.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000849.bin
+Burst 85: pitch 40.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000851.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000852.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000853.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000854.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000855.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000856.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000857.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000858.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000859.bin
+Burst 86: pitch 41.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000861.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000862.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000863.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000864.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000865.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000866.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000867.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000868.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000869.bin
+Burst 87: pitch 42.700000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000871.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000872.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000873.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000874.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000875.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000876.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000877.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000878.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000879.bin
+Burst 88: pitch 43.600000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000881.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000882.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000883.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000884.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000885.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000886.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000887.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000888.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000889.bin
+Burst 89: pitch 44.600000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000891.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000892.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000893.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000894.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000895.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000896.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000897.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000898.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000899.bin
+Burst 90: pitch 45.600000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000901.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000902.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000903.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000904.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000905.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000906.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000907.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000908.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000909.bin
+Burst 91: pitch 46.600000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000911.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000912.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000913.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000914.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000915.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000916.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000917.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000918.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000919.bin
+Burst 92: pitch 47.600000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000921.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000922.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000923.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000924.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000925.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000926.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000927.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000928.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000929.bin
+Burst 93: pitch 48.500000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000931.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000932.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000933.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000934.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000935.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000936.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000937.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000938.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000939.bin
+Burst 94: pitch 49.500000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000941.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000942.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000943.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000944.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000945.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000946.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000947.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000948.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000949.bin
+Burst 95: pitch 50.500000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000951.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000952.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000953.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000954.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000955.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000956.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000957.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000958.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000959.bin
+Burst 96: pitch 51.400000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000961.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000962.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000963.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000964.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000965.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000966.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000967.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000968.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000969.bin
+Burst 97: pitch 52.400000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000971.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000972.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000973.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000974.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000975.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000976.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000977.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000978.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000979.bin
+Burst 98: pitch 53.400000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000981.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000982.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000983.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000984.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000985.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000986.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000987.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000988.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000989.bin
+Burst 99: pitch 54.400000
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000991.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000992.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000993.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000994.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000995.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000996.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000997.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000998.bin
+Reading /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/rec_7038_000999.bin
+there are 104 bin files missing in the sweepParsing /tmp/covis7s2x290t/COVIS-20210103T140002-fullimaging1/index.csv
+Burst 1: pitch -42.80
+Burst 2: pitch -41.80
+Burst 3: pitch -40.80
+Burst 4: pitch -39.80
+Burst 5: pitch -38.80
+Burst 6: pitch -37.80
+Burst 7: pitch -36.80
+Burst 8: pitch -35.80
+Burst 9: pitch -34.80
+Burst 10: pitch -33.80
+Burst 11: pitch -32.80
+Burst 12: pitch -31.80
+Burst 13: pitch -30.80
+Burst 14: pitch -29.80
+Burst 15: pitch -28.80
+Burst 16: pitch -27.80
+Burst 17: pitch -26.80
+Burst 18: pitch -25.80
+Burst 19: pitch -24.80
+Burst 20: pitch -23.80
+Burst 21: pitch -22.80
+Burst 22: pitch -21.80
+Burst 23: pitch -20.80
+Burst 24: pitch -19.80
+Burst 25: pitch -18.80
+Burst 26: pitch -17.80
+Burst 27: pitch -16.90
+Burst 28: pitch -15.80
+Burst 29: pitch -14.80
+Burst 30: pitch -13.80
+Burst 31: pitch -12.80
+Burst 32: pitch -11.90
+Burst 33: pitch -10.80
+Burst 34: pitch -9.90
+Burst 35: pitch -8.90
+Burst 36: pitch -7.90
+Burst 37: pitch -6.90
+Burst 38: pitch -5.90
+Burst 39: pitch -4.90
+Burst 40: pitch -3.90
+Burst 41: pitch -2.90
+Burst 42: pitch -1.90
+Burst 43: pitch -0.90
+Burst 44: pitch 0.10
+Burst 45: pitch 1.10
+Burst 46: pitch 2.10
+Burst 47: pitch 3.10
+Burst 48: pitch 4.10
+Burst 49: pitch 5.10
+Burst 50: pitch 6.10
+Burst 51: pitch 7.10
+Burst 52: pitch 8.10
+Burst 53: pitch 9.10
+
+covis =
+
+  struct with fields:
+
+    imaging: [1x1 struct]
+    diffuse: [1x1 struct]
+
+    imaging: [1x1 struct]
+    diffuse: [1x1 struct]
+
+
+imaging =
+
+  struct with fields:
+
+          type: 'imaging'
+      comments: 'ASHES at Axial'
+          user: [1x1 struct]
+         sonar: [1x1 struct]
+    processing: [1x1 struct]
+          grid: [1x1 struct]
+       release: "3.2.0"
+         sweep: [1x1 struct]
+          ping: [1x927 struct]
+         burst: [1x102 struct]
+      bad_ping: []
+
+
+diffuseFile =
+
+    "/tmp/tmpqp9i3nbx/output/COVIS-20210103T140002-diffuse_fr1.mat"
+
+
+diffuse =
+
+  struct with fields:
+
+          type: 'diffuse_fr'
+      comments: 'ASHES at Axial'
+          user: [1x1 struct]
+         sonar: [1x1 struct]
+    processing: [1x1 struct]
+          grid: {1x10 cell}
+       release: "3.2.0"
+         sweep: [1x1 struct]
+          ping: [1x927 struct]
+      bad_ping: []
+
+
+output =
+
+  0x0 empty cell array
+
+Metadata file: /tmp/tmpqp9i3nbx/output/metadata.json
+Uploaded COVIS-20210103T140002-imaging1.mat to bucket postprocessed, path Version3.2_automatic/2021/01/03/COVIS-20210103T140002-fullimaging1/COVIS-20210103T140002-imaging1.mat
+Uploaded metadata.json to bucket postprocessed, path Version3.2_automatic/2021/01/03/COVIS-20210103T140002-fullimaging1/metadata.json

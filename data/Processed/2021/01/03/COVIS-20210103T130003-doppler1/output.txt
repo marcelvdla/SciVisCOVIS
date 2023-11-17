@@ -1,0 +1,10 @@
+Processing data from COVIS-20210103T130003-doppler1
+Processing COVIS archive /tmp/tmp6cq5582a/COVIS-20210103T130003-doppler1 to path /tmp/tmp6cq5582a/output
+Processing input file: /tmp/tmp6cq5582a/COVIS-20210103T130003-doppler1
+            to output: /tmp/tmp6cq5582a/output/COVIS-20210103T130003-doppler1.mat
+An error occurred when evaluating the result from a function. Details: 
+  File /tmp/.mcrCache9.8/matlab0/matlab/matlab/process.m, line 11, in process
+Output argument "covis" (and maybe others) not assigned during call to "covis_raw_sweep".
+
+Metadata file: /tmp/tmp6cq5582a/output/metadata.json
+Uploaded metadata.json to bucket postprocessed, path Version3.2_automatic/2021/01/03/COVIS-20210103T130003-doppler1/metadata.json
