@@ -127,6 +127,65 @@ def processEndInteractionEvent(obj, event):
 
 slider.AddObserver("InteractionEvent", processEndInteractionEvent)
 
+# # Add 2D axes using vtkAxisActor2D
+# axis_actor_x = vtk.vtkAxisActor2D()
+# axis_actor_x.SetPoint1(0, -40, 0)
+# axis_actor_x.SetPoint2(20, 0)
+# axis_actor_x.SetNumberOfLabels(6)
+# axis_actor_x.SetLabelFormat("%4.0f")
+# axis_actor_x.SetTitle("X Axis")
+
+# axis_actor_y = vtk.vtkAxisActor2D()
+# axis_actor_y.SetPoint1(0, -40)
+# axis_actor_y.SetPoint2(0, 20)
+# axis_actor_y.SetNumberOfLabels(6)
+# axis_actor_y.SetLabelFormat("%4.0f")
+# axis_actor_y.SetTitle("Y Axis")
+
+# axis_actor_z = vtk.vtkAxisActor2D()
+# axis_actor_z.SetPoint1(0, 0)
+# axis_actor_z.SetPoint2(20, 0)
+# axis_actor_z.SetNumberOfLabels(6)
+# axis_actor_z.SetLabelFormat("%4.0f")
+# axis_actor_z.SetTitle("Z Axis")
+# # axis_actor_z.SetAxisLabelTextProperty(axis_actor_z.GetTitleTextProperty())  # Use the same property for axis labels
+
+# # Add the axes to the renderer
+# renderer.AddActor(axis_actor_x)
+# renderer.AddActor(axis_actor_y)
+# renderer.AddActor(axis_actor_z)
+
+# # Add axes
+# axes = vtk.vtkAxesActor()
+# axes.SetTotalLength(60, 60, 30)
+# axes.GetXAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
+# axes.GetYAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
+# axes.GetZAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
+
+# # Add the axes to the renderer
+# renderer.AddActor(axes)
+
+# Add grid axes with ticks
+axes = vtk.vtkCubeAxesActor()
+# axes.SetInputData(grid)
+axes.SetXTitle("X")
+axes.SetYTitle("Y")
+axes.SetZTitle("Z")
+axes.GetXAxesGridlinesProperty().SetColor(0, 0, 0)
+axes.GetYAxesGridlinesProperty().SetColor(0, 0, 0)
+axes.GetZAxesGridlinesProperty().SetColor(0, 0, 0)
+axes.GetXAxesLinesProperty().SetColor(0, 0, 0)
+axes.GetYAxesLinesProperty().SetColor(0, 0, 0)
+axes.GetZAxesLinesProperty().SetColor(0, 0, 0)
+# axes.SetGridLineLocation(vtk.VTK_GRID_LINES_FURTHEST)
+axes.SetFlyModeToStaticEdges()
+axes.SetTickLocationToBoth()
+axes.SetCamera(renderer.GetActiveCamera())
+axes.PickableOff()
+
+# Add the axes to the renderer
+renderer.AddActor(axes)
+
 # Set camera position
 renderer.GetActiveCamera().Azimuth(30)
 renderer.GetActiveCamera().Elevation(30)
