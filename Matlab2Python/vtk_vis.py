@@ -33,7 +33,7 @@ colors.SetNumberOfComponents(1)
 # Populate points and colors
 for i in range(xb.shape[0]):
     for j in range(xb.shape[1]):
-        points.InsertNextPoint(xb[i, j], yb[i, j], zb[i, j])
+        points.InsertNextPoint(zb[i, j], xb[i, j], yb[i, j])
         colors.InsertNextValue(zb[i, j])
 
 grid.SetDimensions(1, xb.shape[1], xb.shape[0])
@@ -54,12 +54,16 @@ scalars2 = vtk.vtkFloatArray()
 for i in range(xg.shape[0]):
     for j in range(xg.shape[1]):
         for k in range(xg.shape[2]):
-            points2.InsertNextPoint(xg[i, j, k], yg[i, j, k], zg[i, j, k])
+            points2.InsertNextPoint(zg[i, j, k], yg[i, j, k], xg[i, j, k])
             scalars2.InsertNextValue(v[i, j, k])
 
 vtk_data2 = vtk.vtkStructuredPoints()
 vtk_data2.SetDimensions(xg.shape[2], xg.shape[1], xg.shape[0])
 vtk_data2.GetPointData().SetScalars(scalars2)
+
+vtk_data2.SetExtent(0, xg.shape[2]-1, -xg.shape[1]+1, 0, 0, xg.shape[0]-1)
+vtk_data2.SetSpacing(0.25,0.25,0.25)
+vtk_data2.SetOrigin(-2,20, -40)
 
 # Create a VTK contour filter
 contour2 = vtk.vtkContourFilter()
@@ -157,7 +161,7 @@ slider.AddObserver("InteractionEvent", processEndInteractionEvent)
 
 # # Add axes
 # axes = vtk.vtkAxesActor()
-# axes.SetTotalLength(60, 60, 30)
+# axes.SetTotalLength(30, 60, 60)
 # axes.GetXAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
 # axes.GetYAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
 # axes.GetZAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
@@ -165,26 +169,26 @@ slider.AddObserver("InteractionEvent", processEndInteractionEvent)
 # # Add the axes to the renderer
 # renderer.AddActor(axes)
 
-# Add grid axes with ticks
-axes = vtk.vtkCubeAxesActor()
-# axes.SetInputData(grid)
-axes.SetXTitle("X")
-axes.SetYTitle("Y")
-axes.SetZTitle("Z")
-axes.GetXAxesGridlinesProperty().SetColor(0, 0, 0)
-axes.GetYAxesGridlinesProperty().SetColor(0, 0, 0)
-axes.GetZAxesGridlinesProperty().SetColor(0, 0, 0)
-axes.GetXAxesLinesProperty().SetColor(0, 0, 0)
-axes.GetYAxesLinesProperty().SetColor(0, 0, 0)
-axes.GetZAxesLinesProperty().SetColor(0, 0, 0)
-# axes.SetGridLineLocation(vtk.VTK_GRID_LINES_FURTHEST)
-axes.SetFlyModeToStaticEdges()
-axes.SetTickLocationToBoth()
-axes.SetCamera(renderer.GetActiveCamera())
-axes.PickableOff()
+# # Add grid axes with ticks
+# axes = vtk.vtkCubeAxesActor()
+# # axes.SetInputData(grid)
+# axes.SetXTitle("X")
+# axes.SetYTitle("Y")
+# axes.SetZTitle("Z")
+# axes.GetXAxesGridlinesProperty().SetColor(0, 0, 0)
+# axes.GetYAxesGridlinesProperty().SetColor(0, 0, 0)
+# axes.GetZAxesGridlinesProperty().SetColor(0, 0, 0)
+# axes.GetXAxesLinesProperty().SetColor(0, 0, 0)
+# axes.GetYAxesLinesProperty().SetColor(0, 0, 0)
+# axes.GetZAxesLinesProperty().SetColor(0, 0, 0)
+# # axes.SetGridLineLocation(vtk.VTK_GRID_LINES_FURTHEST)
+# axes.SetFlyModeToStaticEdges()
+# axes.SetTickLocationToBoth()
+# axes.SetCamera(renderer.GetActiveCamera())
+# axes.PickableOff()
 
-# Add the axes to the renderer
-renderer.AddActor(axes)
+# # Add the axes to the renderer
+# renderer.AddActor(axes)
 
 # Set camera position
 renderer.GetActiveCamera().Azimuth(30)
@@ -199,3 +203,4 @@ render_window_interactor.Start()
 
 #%%
 
+# %%
