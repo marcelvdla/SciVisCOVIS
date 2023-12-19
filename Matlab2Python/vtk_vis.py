@@ -24,6 +24,19 @@ m = np.where(v == 0)
 v[m] = eps  # remove zeros
 v = 10 * np.log10(v)
 
+def limit(v, X, Y, Z, xmin, xmax, ymin, ymax, zmin, zmax):
+    if len(v.shape) == 3:
+        m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax) & (Z >= zmin) & (Z <= zmax)
+        v[~m] = np.nan
+    elif len(v.shape) == 2:
+        m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax)
+        v[~m] = np.nan
+    return v
+
+v = limit(v, xg, yg, zg, -20, 1, -8, 12, -2, 15)
+zb = limit(zb, xb, yb, zb, -20, 1, -8, 12, -2, 15)
+
+
 # Create VTK data structures
 points = vtk.vtkPoints()
 grid = vtk.vtkStructuredGrid()
@@ -38,14 +51,37 @@ for i in range(xb.shape[0]):
 
 grid.SetDimensions(1, xb.shape[1], xb.shape[0])
 grid.SetPoints(points)
+grid.GetPointData().SetScalars(colors)
 
 # Create VTK mapper and actor for the first dataset
 mapper1 = vtk.vtkDataSetMapper()
 mapper1.SetInputData(grid)
 mapper1.SetScalarRange(np.nanmin(zb), np.nanmax(zb))
 
+# Create a color transfer function
+color_function = vtk.vtkColorTransferFunction()
+color_function.SetColorSpaceToDiverging()
+color_function.AddRGBPoint(np.nanmin(zb), 0.0, 0.0, 0.5)  # Dark blue
+color_function.AddRGBPoint(np.nanmax(zb), 0.5, 0.0, 0.0)  # Dark red
+
+mapper1.SetLookupTable(color_function)
+
 actor1 = vtk.vtkActor()
 actor1.SetMapper(mapper1)
+
+# Create a contour filter
+contour_filter = vtk.vtkContourFilter()
+contour_filter.SetInputData(grid)
+contour_filter.GenerateValues(30, np.nanmin(zb), np.nanmax(zb))  # Adjust the number of contours as needed
+
+# Create mapper for contour lines
+contour_mapper = vtk.vtkPolyDataMapper()
+contour_mapper.SetInputConnection(contour_filter.GetOutputPort())
+
+# Create actor for contour lines
+contour_actor = vtk.vtkActor()
+contour_actor.SetMapper(contour_mapper)
+contour_actor.GetProperty().SetColor(0.4, 0.4, 0.4)  # Set contour line color
 
 # Create a VTK structured points object for the second dataset
 points2 = vtk.vtkPoints()
@@ -63,12 +99,12 @@ vtk_data2.GetPointData().SetScalars(scalars2)
 
 vtk_data2.SetExtent(0, xg.shape[2]-1, -xg.shape[1]+1, 0, 0, xg.shape[0]-1)
 vtk_data2.SetSpacing(0.25,0.25,0.25)
-vtk_data2.SetOrigin(-2,20, -40)
+vtk_data2.SetOrigin(0 ,20, -40)
 
 # Create a VTK contour filter
 contour2 = vtk.vtkContourFilter()
 contour2.SetInputData(vtk_data2)
-contour2.SetValue(0, (np.nanmax(v) + np.nanmin(v))/2)
+contour2.SetValue(0, -60)
 
 # Create a mapper for the second dataset
 mapper2 = vtk.vtkPolyDataMapper()
@@ -77,6 +113,52 @@ mapper2.SetInputConnection(contour2.GetOutputPort())
 # Create an actor for the second dataset
 actor2 = vtk.vtkActor()
 actor2.SetMapper(mapper2)
+actor2.GetProperty().SetOpacity(0.1)
+actor2.GetProperty().SetColor(77/255, 153/255, 204/255)
+
+# Create a VTK contour filter
+contour3 = vtk.vtkContourFilter()
+contour3.SetInputData(vtk_data2)
+contour3.SetValue(0, -50)
+
+# Create a mapper for the second dataset
+mapper3 = vtk.vtkPolyDataMapper()
+mapper3.SetInputConnection(contour3.GetOutputPort())
+
+actor3 = vtk.vtkActor()
+actor3.SetMapper(mapper3)
+actor3.GetProperty().SetOpacity(0.2)
+actor3.GetProperty().SetColor(128/255, 77/255, 128/255)
+
+# Create a VTK contour filter
+contour4 = vtk.vtkContourFilter()
+contour4.SetInputData(vtk_data2)
+contour4.SetValue(0, -40)
+
+# Create a mapper for the second dataset
+mapper4 = vtk.vtkPolyDataMapper()
+mapper4.SetInputConnection(contour4.GetOutputPort())
+
+actor4 = vtk.vtkActor()
+actor4.SetMapper(mapper4)
+actor4.GetProperty().SetOpacity(0.3)
+actor4.GetProperty().SetColor(153/255 ,5/255, 13/255)
+
+# Create a line source
+line_source = vtk.vtkLineSource()
+line_source.SetPoint1(0, 0, 0)
+line_source.SetPoint2(4.2, 0, 0)
+
+# Create a mapper
+mapper5 = vtk.vtkPolyDataMapper()
+mapper5.SetInputConnection(line_source.GetOutputPort())
+
+# Create an actor
+actor5 = vtk.vtkActor()
+actor5.SetMapper(mapper5)
+actor5.GetProperty().SetColor(1, 1, 0)  # Yellow color
+actor5.GetProperty().SetLineWidth(4)   # Set line width
+
 
 # Create a renderer and render window
 renderer = vtk.vtkRenderer()
@@ -91,111 +173,99 @@ render_window_interactor.SetRenderWindow(render_window)
 # Add actors to the renderer
 renderer.AddActor(actor1)
 renderer.AddActor(actor2)
+renderer.AddActor(actor3)
+renderer.AddActor(actor4)
+renderer.AddActor(actor5)
+renderer.AddActor(contour_actor)
 
-# Create a slider to set the isovalue
-slider_rep = vtk.vtkSliderRepresentation2D()
-slider_rep.SetMinimumValue(np.nanmin(v))
-slider_rep.SetMaximumValue(np.nanmax(v))
-slider_rep.SetValue((np.nanmax(v) + np.nanmin(v)) / 2)
-slider_rep.SetTitleText("Contour")
-slider_rep.GetPoint1Coordinate().SetCoordinateSystemToNormalizedDisplay()
-slider_rep.GetPoint1Coordinate().SetValue(0.3, 0.2)
-slider_rep.GetPoint2Coordinate().SetCoordinateSystemToNormalizedDisplay()
-slider_rep.GetPoint2Coordinate().SetValue(0.7, 0.2)
-slider_rep.SetSliderLength(0.02)
-slider_rep.SetSliderWidth(0.03)
-slider_rep.SetEndCapLength(0.01)
-slider_rep.SetEndCapWidth(0.03)
-slider_rep.SetTubeWidth(0.005)
-slider_rep.SetLabelFormat("%3.0lf")
-slider_rep.SetTitleHeight(0.02)
-slider_rep.SetLabelHeight(0.02)
+# # Create a slider to set the isovalue
+# slider_rep = vtk.vtkSliderRepresentation2D()
+# slider_rep.SetMinimumValue(np.nanmin(v))
+# slider_rep.SetMaximumValue(np.nanmax(v))
+# slider_rep.SetValue((np.nanmax(v) + np.nanmin(v)) / 2)
+# slider_rep.SetTitleText("Contour")
+# slider_rep.GetPoint1Coordinate().SetCoordinateSystemToNormalizedDisplay()
+# slider_rep.GetPoint1Coordinate().SetValue(0.3, 0.2)
+# slider_rep.GetPoint2Coordinate().SetCoordinateSystemToNormalizedDisplay()
+# slider_rep.GetPoint2Coordinate().SetValue(0.7, 0.2)
+# slider_rep.SetSliderLength(0.02)
+# slider_rep.SetSliderWidth(0.03)
+# slider_rep.SetEndCapLength(0.01)
+# slider_rep.SetEndCapWidth(0.03)
+# slider_rep.SetTubeWidth(0.005)
+# slider_rep.SetLabelFormat("%3.0lf")
+# slider_rep.SetTitleHeight(0.02)
+# slider_rep.SetLabelHeight(0.02)
 
-# Set the color of the slider to black
-slider_rep.GetSliderProperty().SetColor(0, 0, 0)
-# Set the color of the slider rail (entire slider) to black
-slider_rep.GetTubeProperty().SetColor(0, 0, 0)
+# # Set the color of the slider to black
+# slider_rep.GetSliderProperty().SetColor(0, 0, 0)
+# # Set the color of the slider rail (entire slider) to black
+# slider_rep.GetTubeProperty().SetColor(0, 0, 0)
 
-# The slider (see https://vtk.org/doc/nightly/html/classvtkSliderWidget.html):
-slider = vtk.vtkSliderWidget()
-slider.SetInteractor(render_window_interactor)
-slider.SetRepresentation(slider_rep)
-slider.KeyPressActivationOff()
-slider.SetAnimationModeToAnimate()
-slider.SetEnabled(True)
+# # The slider (see https://vtk.org/doc/nightly/html/classvtkSliderWidget.html):
+# slider = vtk.vtkSliderWidget()
+# slider.SetInteractor(render_window_interactor)
+# slider.SetRepresentation(slider_rep)
+# slider.KeyPressActivationOff()
+# slider.SetAnimationModeToAnimate()
+# slider.SetEnabled(True)
 
-# Define what to do if the slider value changed:
-def processEndInteractionEvent(obj, event):
-    value2 = int(obj.GetRepresentation().GetValue())
-    contour2.SetValue(0, value2)
+# # Define what to do if the slider value changed:
+# def processEndInteractionEvent(obj, event):
+#     value2 = int(obj.GetRepresentation().GetValue())
+#     contour2.SetValue(0, value2)
 
-slider.AddObserver("InteractionEvent", processEndInteractionEvent)
+# slider.AddObserver("InteractionEvent", processEndInteractionEvent)
 
-# # Add 2D axes using vtkAxisActor2D
-# axis_actor_x = vtk.vtkAxisActor2D()
-# axis_actor_x.SetPoint1(0, -40, 0)
-# axis_actor_x.SetPoint2(20, 0)
-# axis_actor_x.SetNumberOfLabels(6)
-# axis_actor_x.SetLabelFormat("%4.0f")
-# axis_actor_x.SetTitle("X Axis")
+# Add grid axes with ticks
+axes = vtk.vtkCubeAxesActor()
+axes.SetUseTextActor3D(1)
+# axes.SetBounds(grid.GetBounds())
+axes.SetBounds(-2, 15, -20, 1, -8, 12,)
+axes.SetCamera(renderer.GetActiveCamera())
 
-# axis_actor_y = vtk.vtkAxisActor2D()
-# axis_actor_y.SetPoint1(0, -40)
-# axis_actor_y.SetPoint2(0, 20)
-# axis_actor_y.SetNumberOfLabels(6)
-# axis_actor_y.SetLabelFormat("%4.0f")
-# axis_actor_y.SetTitle("Y Axis")
+axes.GetXAxesGridlinesProperty().SetColor(0, 0, 0)
+axes.GetYAxesGridlinesProperty().SetColor(0, 0, 0)
+axes.GetZAxesGridlinesProperty().SetColor(0, 0, 0)
 
-# axis_actor_z = vtk.vtkAxisActor2D()
-# axis_actor_z.SetPoint1(0, 0)
-# axis_actor_z.SetPoint2(20, 0)
-# axis_actor_z.SetNumberOfLabels(6)
-# axis_actor_z.SetLabelFormat("%4.0f")
-# axis_actor_z.SetTitle("Z Axis")
-# # axis_actor_z.SetAxisLabelTextProperty(axis_actor_z.GetTitleTextProperty())  # Use the same property for axis labels
+axes.SetXTitle('Height above COVIS base')   # X axis = Z axis
+axes.SetXUnits('m')
+axes.SetYTitle('Easting of COVIS')          # Y axis = X axis
+axes.SetYUnits('m')
+axes.SetZTitle('Northing of COVIS')         # Z axis = Y axis
+axes.SetZUnits('m')
 
-# # Add the axes to the renderer
-# renderer.AddActor(axis_actor_x)
-# renderer.AddActor(axis_actor_y)
-# renderer.AddActor(axis_actor_z)
+axes.GetTitleTextProperty(0).SetColor(0, 0, 0)
+axes.GetLabelTextProperty(0).SetColor(0, 0, 0)
 
-# # Add axes
-# axes = vtk.vtkAxesActor()
-# axes.SetTotalLength(30, 60, 60)
-# axes.GetXAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
-# axes.GetYAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
-# axes.GetZAxisCaptionActor2D().GetTextActor().SetTextScaleModeToNone()
+axes.GetTitleTextProperty(1).SetColor(0, 0, 0)
+axes.GetLabelTextProperty(1).SetColor(0, 0, 0)
 
-# # Add the axes to the renderer
-# renderer.AddActor(axes)
+axes.GetTitleTextProperty(2).SetColor(0, 0, 0)
+axes.GetLabelTextProperty(2).SetColor(0, 0, 0)
 
-# # Add grid axes with ticks
-# axes = vtk.vtkCubeAxesActor()
-# # axes.SetInputData(grid)
-# axes.SetXTitle("X")
-# axes.SetYTitle("Y")
-# axes.SetZTitle("Z")
-# axes.GetXAxesGridlinesProperty().SetColor(0, 0, 0)
-# axes.GetYAxesGridlinesProperty().SetColor(0, 0, 0)
-# axes.GetZAxesGridlinesProperty().SetColor(0, 0, 0)
-# axes.GetXAxesLinesProperty().SetColor(0, 0, 0)
-# axes.GetYAxesLinesProperty().SetColor(0, 0, 0)
-# axes.GetZAxesLinesProperty().SetColor(0, 0, 0)
-# # axes.SetGridLineLocation(vtk.VTK_GRID_LINES_FURTHEST)
-# axes.SetFlyModeToStaticEdges()
-# axes.SetTickLocationToBoth()
-# axes.SetCamera(renderer.GetActiveCamera())
-# axes.PickableOff()
+axes.DrawXGridlinesOn()
+axes.DrawYGridlinesOn()
+axes.DrawZGridlinesOn()
+axes.SetGridLineLocation(axes.VTK_GRID_LINES_FURTHEST)
 
-# # Add the axes to the renderer
-# renderer.AddActor(axes)
+axes.XAxisMinorTickVisibilityOff()
+axes.YAxisMinorTickVisibilityOff()
+axes.ZAxisMinorTickVisibilityOff()
 
-# Set camera position
-renderer.GetActiveCamera().Azimuth(30)
-renderer.GetActiveCamera().Elevation(30)
+renderer.AddActor(axes)
+
+renderer.GetActiveCamera().Azimuth(-55)
+renderer.GetActiveCamera().Elevation(130)
+renderer.GetActiveCamera().SetViewUp(1, 0, 0)
+
+renderer.ResetCamera()
+renderer.GetActiveCamera().Zoom(2.5)
+
+# Add the axes to the renderer
+renderer.AddActor(axes)
 
 # Reset camera and render
-renderer.ResetCamera()
 render_window.Render()
 
 # Start the interactive visualization
