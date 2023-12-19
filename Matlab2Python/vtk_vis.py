@@ -25,12 +25,8 @@ v[m] = eps  # remove zeros
 v = 10 * np.log10(v)
 
 def limit(v, X, Y, Z, xmin, xmax, ymin, ymax, zmin, zmax):
-    if len(v.shape) == 3:
-        m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax) & (Z >= zmin) & (Z <= zmax)
-        v[~m] = np.nan
-    elif len(v.shape) == 2:
-        m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax)
-        v[~m] = np.nan
+    m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax) & (Z >= zmin) & (Z <= zmax)
+    v[~m] = np.nan
     return v
 
 v = limit(v, xg, yg, zg, -20, 1, -8, 12, -2, 15)
@@ -42,6 +38,7 @@ points = vtk.vtkPoints()
 grid = vtk.vtkStructuredGrid()
 colors = vtk.vtkFloatArray()
 colors.SetNumberOfComponents(1)
+colours = vtk.vtkNamedColors()
 
 # Populate points and colors
 for i in range(xb.shape[0]):
@@ -61,8 +58,8 @@ mapper1.SetScalarRange(np.nanmin(zb), np.nanmax(zb))
 # Create a color transfer function
 color_function = vtk.vtkColorTransferFunction()
 color_function.SetColorSpaceToDiverging()
-color_function.AddRGBPoint(np.nanmin(zb), 0.0, 0.0, 0.5)  # Dark blue
-color_function.AddRGBPoint(np.nanmax(zb), 0.5, 0.0, 0.0)  # Dark red
+color_function.AddRGBPoint(np.nanmin(zb), 244, 164, 96)  # Dark blue
+color_function.AddRGBPoint(np.nanmax(zb), 255, 245, 238)  # Dark red
 
 mapper1.SetLookupTable(color_function)
 
@@ -74,14 +71,20 @@ contour_filter = vtk.vtkContourFilter()
 contour_filter.SetInputData(grid)
 contour_filter.GenerateValues(30, np.nanmin(zb), np.nanmax(zb))  # Adjust the number of contours as needed
 
+# Create a color transfer function
+color_function1 = vtk.vtkColorTransferFunction()
+color_function1.SetColorSpaceToDiverging()
+color_function1.AddRGBPoint(np.nanmin(zb), 0, 0, 0)
+color_function1.AddRGBPoint(np.nanmax(zb), 0, 0, 0)
+
 # Create mapper for contour lines
 contour_mapper = vtk.vtkPolyDataMapper()
 contour_mapper.SetInputConnection(contour_filter.GetOutputPort())
+contour_mapper.SetLookupTable(color_function1)
 
 # Create actor for contour lines
 contour_actor = vtk.vtkActor()
 contour_actor.SetMapper(contour_mapper)
-contour_actor.GetProperty().SetColor(0.4, 0.4, 0.4)  # Set contour line color
 
 # Create a VTK structured points object for the second dataset
 points2 = vtk.vtkPoints()
@@ -101,48 +104,66 @@ vtk_data2.SetExtent(0, xg.shape[2]-1, -xg.shape[1]+1, 0, 0, xg.shape[0]-1)
 vtk_data2.SetSpacing(0.25,0.25,0.25)
 vtk_data2.SetOrigin(0 ,20, -40)
 
+
+# color_function.AddRGBPoint(-60, 77,153,204)
+# color_function.AddRGBPoint(-50, 128,77,128)
+# color_function.AddRGBPoint(-40, 153,5,13)
+
 # Create a VTK contour filter
 contour2 = vtk.vtkContourFilter()
 contour2.SetInputData(vtk_data2)
 contour2.SetValue(0, -60)
 
+# Create a color transfer function
+color_function2 = vtk.vtkColorTransferFunction()
+# color_function2.SetColorSpaceToDiverging()
+color_function2.AddRGBPoint(-60, 77,153,204)
+
 # Create a mapper for the second dataset
 mapper2 = vtk.vtkPolyDataMapper()
 mapper2.SetInputConnection(contour2.GetOutputPort())
+mapper2.SetLookupTable(color_function2)
 
 # Create an actor for the second dataset
 actor2 = vtk.vtkActor()
 actor2.SetMapper(mapper2)
 actor2.GetProperty().SetOpacity(0.1)
-actor2.GetProperty().SetColor(77/255, 153/255, 204/255)
 
 # Create a VTK contour filter
 contour3 = vtk.vtkContourFilter()
 contour3.SetInputData(vtk_data2)
 contour3.SetValue(0, -50)
 
+color_function3 = vtk.vtkColorTransferFunction()
+# color_function3.SetColorSpaceToDiverging()
+color_function3.AddRGBPoint(-50, 128,77,128)
+
 # Create a mapper for the second dataset
 mapper3 = vtk.vtkPolyDataMapper()
 mapper3.SetInputConnection(contour3.GetOutputPort())
+mapper3.SetLookupTable(color_function3)
 
 actor3 = vtk.vtkActor()
 actor3.SetMapper(mapper3)
 actor3.GetProperty().SetOpacity(0.2)
-actor3.GetProperty().SetColor(128/255, 77/255, 128/255)
 
 # Create a VTK contour filter
 contour4 = vtk.vtkContourFilter()
 contour4.SetInputData(vtk_data2)
 contour4.SetValue(0, -40)
 
+color_function4 = vtk.vtkColorTransferFunction()
+# color_function4.SetColorSpaceToDiverging()
+color_function4.AddRGBPoint(-40, 153,5,13)
+
 # Create a mapper for the second dataset
 mapper4 = vtk.vtkPolyDataMapper()
 mapper4.SetInputConnection(contour4.GetOutputPort())
+mapper4.SetLookupTable(color_function4)
 
 actor4 = vtk.vtkActor()
 actor4.SetMapper(mapper4)
 actor4.GetProperty().SetOpacity(0.3)
-actor4.GetProperty().SetColor(153/255 ,5/255, 13/255)
 
 # Create a line source
 line_source = vtk.vtkLineSource()
@@ -220,7 +241,6 @@ renderer.AddActor(contour_actor)
 # Add grid axes with ticks
 axes = vtk.vtkCubeAxesActor()
 axes.SetUseTextActor3D(1)
-# axes.SetBounds(grid.GetBounds())
 axes.SetBounds(-2, 15, -20, 1, -8, 12,)
 axes.SetCamera(renderer.GetActiveCamera())
 
@@ -248,6 +268,9 @@ axes.DrawXGridlinesOn()
 axes.DrawYGridlinesOn()
 axes.DrawZGridlinesOn()
 axes.SetGridLineLocation(axes.VTK_GRID_LINES_FURTHEST)
+
+
+axes.SetFlyModeToOuterEdges()
 
 axes.XAxisMinorTickVisibilityOff()
 axes.YAxisMinorTickVisibilityOff()
