@@ -2,6 +2,12 @@ import scipy.io as spio
 import numpy as np
 import vtk
 
+def limit(v, X, Y, Z, xmin, xmax, ymin, ymax, zmin, zmax):
+    m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax) & (Z >= zmin) & (Z <= zmax)
+    v[~m] = np.nan
+    return v
+
+
 def load_bathy(file):
     ''' This function reads the gridded data for the bathy
     '''
@@ -12,6 +18,9 @@ def load_bathy(file):
     zb = lib["covis"]["grid"][0][0][0]["v"][0]
     rb = np.sqrt(xb**2 + yb**2)
     zb[(rb < 4)] = np.NaN
+
+    zb = limit(zb, xb, yb, zb, -20, 1, -8, 12, -2, 15)
+    print('Loaded bathy')
 
     return xb, yb, zb
 
@@ -32,6 +41,9 @@ def vtk_bathy(x, y, z):
 
     grid.SetDimensions(1, x.shape[1], x.shape[0])
     grid.SetPoints(points)
+    grid.GetPointData().SetScalars(colors)
+
+    print('Created visual of bathy')
 
     return grid
 
@@ -51,6 +63,10 @@ def load_imaging(file):
     m = np.where(v == 0)
     v[m] = eps  # remove zeros
     v = 10 * np.log10(v)
+
+    v = limit(v, xg, yg, zg, -20, 1, -8, 12, -2, 15)
+
+    print(f'Loaded imaging of file {file.split("/")[-1]}')
 
     return xg, yg, zg, v
 
@@ -76,5 +92,7 @@ def vtk_imaging(x, y, z, v):
     vtk_data.SetExtent(0, x.shape[2]-1, -x.shape[1]+1, 0, 0, x.shape[0]-1)
     vtk_data.SetSpacing(0.25,0.25,0.25)
     vtk_data.SetOrigin(-2,20, -40)
+
+    print('Created structured points')
 
     return vtk_data
