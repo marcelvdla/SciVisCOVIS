@@ -1,5 +1,4 @@
 #!/usr/bin/env vtkpython
-
 import os
 import sys
 import vtk
@@ -9,6 +8,8 @@ import numpy as np
 from load import *
 import time
 
+
+# Colortable for the different plumes in showall
 colors = [
     (230, 25, 75),    # Red
     (60, 180, 75),    # Green
@@ -103,7 +104,6 @@ def animate(contour, frames, c_value, set_iters, render_window):
         time.sleep(2)
         
 
-
 def create_axes(renderer):
     # Add grid axes with ticks
     axes = vtk.vtkCubeAxesActor()
@@ -157,10 +157,8 @@ def main(argv):
 
     xb, yb, zb = load_bathy(bathy_file)
 
-    # Load initial imaging data and bathy
+    # Create bathy and actors for bathy
     grid = vtk_bathy(xb, yb, zb)
-
-    # Create and actors for bathy
     actor_bathy, actor_bathy_contour = bathy(grid, zb)
 
     ## COVIS
@@ -215,7 +213,6 @@ def main(argv):
         except:
             print('Invalid values')
             
-        
         # create initial contour:
         contour, actor = imaging(frames[0], c_value, opacity, [77,153,204])
         renderer.AddActor(actor)
@@ -233,7 +230,6 @@ def main(argv):
     elif argv[1] == 'showall':
         # Set contour value and opacity
         try:
-            print(argv[2], argv[3])
             c_value = -int(argv[2])
             opacity = float(argv[3])
             print(f'Showing all plumes with contour value {c_value} and opacity {opacity}')
