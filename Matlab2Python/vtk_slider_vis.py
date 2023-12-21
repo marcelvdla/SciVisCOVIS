@@ -38,7 +38,7 @@ points = vtk.vtkPoints()
 grid = vtk.vtkStructuredGrid()
 colors = vtk.vtkFloatArray()
 colors.SetNumberOfComponents(1)
-colours = vtk.vtkNamedColors()
+
 
 # Populate points and colors
 for i in range(xb.shape[0]):
@@ -104,11 +104,6 @@ vtk_data2.SetExtent(0, xg.shape[2]-1, -xg.shape[1]+1, 0, 0, xg.shape[0]-1)
 vtk_data2.SetSpacing(0.25,0.25,0.25)
 vtk_data2.SetOrigin(0 ,20, -40)
 
-
-# color_function.AddRGBPoint(-60, 77,153,204)
-# color_function.AddRGBPoint(-50, 128,77,128)
-# color_function.AddRGBPoint(-40, 153,5,13)
-
 # Create a VTK contour filter
 contour2 = vtk.vtkContourFilter()
 contour2.SetInputData(vtk_data2)
@@ -117,7 +112,7 @@ contour2.SetValue(0, -60)
 # Create a color transfer function
 color_function2 = vtk.vtkColorTransferFunction()
 # color_function2.SetColorSpaceToDiverging()
-color_function2.AddRGBPoint(-60, 77/255, 153/255, 204/255)
+color_function2.AddRGBPoint(-60, 0, 1, 1)
 
 # Create a mapper for the second dataset
 mapper2 = vtk.vtkPolyDataMapper()
@@ -127,43 +122,6 @@ mapper2.SetLookupTable(color_function2)
 # Create an actor for the second dataset
 actor2 = vtk.vtkActor()
 actor2.SetMapper(mapper2)
-actor2.GetProperty().SetOpacity(0.1)
-
-# Create a VTK contour filter
-contour3 = vtk.vtkContourFilter()
-contour3.SetInputData(vtk_data2)
-contour3.SetValue(0, -50)
-
-color_function3 = vtk.vtkColorTransferFunction()
-# color_function3.SetColorSpaceToDiverging()
-color_function3.AddRGBPoint(-50, 128/255, 77/255, 128/255)
-
-# Create a mapper for the second dataset
-mapper3 = vtk.vtkPolyDataMapper()
-mapper3.SetInputConnection(contour3.GetOutputPort())
-mapper3.SetLookupTable(color_function3)
-
-actor3 = vtk.vtkActor()
-actor3.SetMapper(mapper3)
-actor3.GetProperty().SetOpacity(0.2)
-
-# Create a VTK contour filter
-contour4 = vtk.vtkContourFilter()
-contour4.SetInputData(vtk_data2)
-contour4.SetValue(0, -40)
-
-color_function4 = vtk.vtkColorTransferFunction()
-# color_function4.SetColorSpaceToDiverging()
-color_function4.AddRGBPoint(-40, 153/255, 5/255, 13/255)
-
-# Create a mapper for the second dataset
-mapper4 = vtk.vtkPolyDataMapper()
-mapper4.SetInputConnection(contour4.GetOutputPort())
-mapper4.SetLookupTable(color_function4)
-
-actor4 = vtk.vtkActor()
-actor4.SetMapper(mapper4)
-actor4.GetProperty().SetOpacity(0.3)
 
 # Create a line source
 line_source = vtk.vtkLineSource()
@@ -194,49 +152,47 @@ render_window_interactor.SetRenderWindow(render_window)
 # Add actors to the renderer
 renderer.AddActor(actor1)
 renderer.AddActor(actor2)
-renderer.AddActor(actor3)
-renderer.AddActor(actor4)
 renderer.AddActor(actor5)
 renderer.AddActor(contour_actor)
 
-# # Create a slider to set the isovalue
-# slider_rep = vtk.vtkSliderRepresentation2D()
-# slider_rep.SetMinimumValue(np.nanmin(v))
-# slider_rep.SetMaximumValue(np.nanmax(v))
-# slider_rep.SetValue((np.nanmax(v) + np.nanmin(v)) / 2)
-# slider_rep.SetTitleText("Contour")
-# slider_rep.GetPoint1Coordinate().SetCoordinateSystemToNormalizedDisplay()
-# slider_rep.GetPoint1Coordinate().SetValue(0.3, 0.2)
-# slider_rep.GetPoint2Coordinate().SetCoordinateSystemToNormalizedDisplay()
-# slider_rep.GetPoint2Coordinate().SetValue(0.7, 0.2)
-# slider_rep.SetSliderLength(0.02)
-# slider_rep.SetSliderWidth(0.03)
-# slider_rep.SetEndCapLength(0.01)
-# slider_rep.SetEndCapWidth(0.03)
-# slider_rep.SetTubeWidth(0.005)
-# slider_rep.SetLabelFormat("%3.0lf")
-# slider_rep.SetTitleHeight(0.02)
-# slider_rep.SetLabelHeight(0.02)
+# Create a slider to set the isovalue
+slider_rep = vtk.vtkSliderRepresentation2D()
+slider_rep.SetMinimumValue(np.nanmin(v))
+slider_rep.SetMaximumValue(np.nanmax(v))
+slider_rep.SetValue((np.nanmax(v) + np.nanmin(v)) / 2)
+slider_rep.SetTitleText("Contour")
+slider_rep.GetPoint1Coordinate().SetCoordinateSystemToNormalizedDisplay()
+slider_rep.GetPoint1Coordinate().SetValue(0.3, 0.2)
+slider_rep.GetPoint2Coordinate().SetCoordinateSystemToNormalizedDisplay()
+slider_rep.GetPoint2Coordinate().SetValue(0.7, 0.2)
+slider_rep.SetSliderLength(0.02)
+slider_rep.SetSliderWidth(0.03)
+slider_rep.SetEndCapLength(0.01)
+slider_rep.SetEndCapWidth(0.03)
+slider_rep.SetTubeWidth(0.005)
+slider_rep.SetLabelFormat("%3.0lf")
+slider_rep.SetTitleHeight(0.02)
+slider_rep.SetLabelHeight(0.02)
 
-# # Set the color of the slider to black
-# slider_rep.GetSliderProperty().SetColor(0, 0, 0)
-# # Set the color of the slider rail (entire slider) to black
-# slider_rep.GetTubeProperty().SetColor(0, 0, 0)
+# Set the color of the slider to black
+slider_rep.GetSliderProperty().SetColor(0, 0, 0)
+# Set the color of the slider rail (entire slider) to black
+slider_rep.GetTubeProperty().SetColor(0, 0, 0)
 
-# # The slider (see https://vtk.org/doc/nightly/html/classvtkSliderWidget.html):
-# slider = vtk.vtkSliderWidget()
-# slider.SetInteractor(render_window_interactor)
-# slider.SetRepresentation(slider_rep)
-# slider.KeyPressActivationOff()
-# slider.SetAnimationModeToAnimate()
-# slider.SetEnabled(True)
+# The slider (see https://vtk.org/doc/nightly/html/classvtkSliderWidget.html):
+slider = vtk.vtkSliderWidget()
+slider.SetInteractor(render_window_interactor)
+slider.SetRepresentation(slider_rep)
+slider.KeyPressActivationOff()
+slider.SetAnimationModeToAnimate()
+slider.SetEnabled(True)
 
-# # Define what to do if the slider value changed:
-# def processEndInteractionEvent(obj, event):
-#     value2 = int(obj.GetRepresentation().GetValue())
-#     contour2.SetValue(0, value2)
+# Define what to do if the slider value changed:
+def processEndInteractionEvent(obj, event):
+    value2 = int(obj.GetRepresentation().GetValue())
+    contour2.SetValue(0, value2)
 
-# slider.AddObserver("InteractionEvent", processEndInteractionEvent)
+slider.AddObserver("InteractionEvent", processEndInteractionEvent)
 
 # Add grid axes with ticks
 axes = vtk.vtkCubeAxesActor()
