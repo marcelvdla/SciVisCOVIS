@@ -5,8 +5,10 @@ import vtk
 
 import scipy.io as spio
 import numpy as np
+import matplotlib.pyplot as plt
 from load import *
 import time
+import re
 
 
 # Colortable for the different plumes in showall
@@ -94,6 +96,8 @@ def imaging(vtk_data, c_value, opacity, rgb):
 
 
 def animate(contour, frames, c_value, set_iters, render_window):
+    ''' This function animates the different timesteps on a single day
+    '''
     for i in range(set_iters):
         j = i % len(frames)
         # Update the contour filter imaging data
@@ -105,6 +109,8 @@ def animate(contour, frames, c_value, set_iters, render_window):
         
 
 def create_axes(renderer):
+    ''' This function adds axes to the visualisation
+    '''
     # Add grid axes with ticks
     axes = vtk.vtkCubeAxesActor()
     axes.SetUseTextActor3D(1)
@@ -146,15 +152,31 @@ def create_axes(renderer):
 
 def main(argv):
     # Load data
-    bathy_file = 'data/covis_bathy_2019b.mat'
+    bathy_file = 'data/bathy/covis_bathy_2019b.mat'
     imaging_files = os.listdir("data/fullimaging")
+    imaging_files.sort()
 
     # Load data for all times on day
     frames = []
     for f in imaging_files:
         xg, yg, zg, v = load_imaging(f'data/fullimaging/{f}/{f}.mat')
-        frames.append(vtk_imaging(xg, yg, zg, v))
 
+        # Create histogram of backscatter values
+        if argv[1] == 'hist':
+            time = re.findall("T\d{6}", f)[0][1:]
+            plt.hist(v.flatten(), bins=100, range=[-89,0], alpha=0.4, label=f't = {time}')
+        else:
+            frames.append(vtk_imaging(xg, yg, zg, v))
+
+    # Plot histogram
+    if argv[1] == 'hist':
+        plt.ylabel('Frequency')
+        plt.xlabel('Backscatter (dB)')
+        plt.title('Histogram of backscatter frequency for imaging on a single day')
+        plt.legend()
+        plt.show()
+        exit()
+    
     xb, yb, zb = load_bathy(bathy_file)
 
     # Create bathy and actors for bathy
