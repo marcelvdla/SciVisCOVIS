@@ -249,16 +249,24 @@ def main(argv):
         opacities = [0.1,0.2,0.3]
         rgbs = [[77,153,204],[128,77,128],[153,5,13]]
 
+        try:
+            f_num = int(argv[2])
+            assert 0 <= f_num <= 11
+            print(f'Showing imaging data of data file {f_num}')
+        except:
+            print('Invalid value, using first data file as default')
+            f_num = 0
+
         for i in range(3):
             print(f'Added contour {i}')
-            contour, actor = imaging(frames[int(argv[2])], c_values[i], opacities[i], rgbs[i])
+            contour, actor = imaging(frames[f_num], c_values[i], opacities[i], rgbs[i])
             renderer.AddActor(actor)
     elif argv[1] == 'showall':
         # Set contour value and opacity
         try:
             c_value = -int(argv[2])
             opacity = float(argv[3])
-            assert -90 <= c_value <= 0 and 0 <= opacity <= 1
+            assert -90 <= c_value <= 0 and 0.0 <= opacity <= 1.0
             print(f'Showing all plumes with contour value {c_value} and opacity {opacity}')
         except:
             print('Invalid values, using defaults c_value=-40, opacity=0.5')
