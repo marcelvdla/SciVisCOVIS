@@ -111,7 +111,7 @@ def imaging(vtk_data, c_value, opacity, rgb):
     return contour, actor
 
 
-def animate(contour, frames, c_value, set_iters, render_window, times):
+def animate(contour, frames, c_value, set_iters, render_window, rgb, times):
     ''' This function animates the different timesteps on a single day
     '''
     for i in range(set_iters):
@@ -119,6 +119,10 @@ def animate(contour, frames, c_value, set_iters, render_window, times):
         # Update the contour filter imaging data
         contour.SetInputData(frames[j])
         contour.SetValue(0, c_value)
+
+        # Create a color transfer function
+        color_function = vtk.vtkColorTransferFunction()
+        color_function.AddRGBPoint(c_value, rgb[0], rgb[1], rgb[2])
 
         render_window.Render()
 
@@ -258,16 +262,16 @@ def main(argv):
             c_value = -40
             opacity = 0.5
             set_iters = 20
-            
+        color = np.array([77,153,204])/256
         # create initial contour:
-        contour, actor = imaging(frames[0], c_value, opacity, [77,153,204])
+        contour, actor = imaging(frames[0], c_value, opacity, color)
         renderer.AddActor(actor)
-        animate(contour, frames, c_value, set_iters, render_window, times)
+        animate(contour, frames, c_value, set_iters, render_window, color, times)
     elif argv[1] == 'show':
         # Variables for different contour values
         c_values = [-60,-50,-40]
         opacities = [0.1,0.2,0.3]
-        rgbs = [[77,153,204],[128,77,128],[153,5,13]]
+        rgbs = np.array([[77,153,204],[128,77,128],[153,5,13]])/256
 
         try:
             f_num = int(argv[2])
