@@ -2,7 +2,10 @@ import scipy.io as spio
 import numpy as np
 import vtk
 
+
 def limit(v, X, Y, Z, xmin, xmax, ymin, ymax, zmin, zmax):
+    ''' limits the data points to those inside the bathymetry grid
+    '''
     m = (X >= xmin) & (X <= xmax) & (Y >= ymin) & (Y <= ymax) & (Z >= zmin) & (Z <= zmax)
     v[~m] = np.nan
     return v
@@ -46,6 +49,7 @@ def vtk_bathy(x, y, z):
     print('Created visual of bathy')
 
     return grid
+
 
 def load_imaging(file):
     ''' This function reads the gridded data for the imaging
