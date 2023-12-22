@@ -1,9 +1,0 @@
-{
-  "verstr": "COVIS Post-processing v3.2.0",
-  "matlab_version": "9.8.0.1323502 (R2020a)",
-  "postprocessing_gitrev": "4191196fcb24ccf110315a519918b638e7785c6f",
-  "postprocessing_gittags": "test-16-g4191196",
-  "covis_worker_gitrev": "98cdd565b8f5cdc841d233168067c9c6de119b0f",
-  "covis_worker_gittags": "",
-  "covis_worker_git_dirty": true
-}
