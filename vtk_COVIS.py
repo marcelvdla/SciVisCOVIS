@@ -23,7 +23,8 @@ colors = [
     (170, 110, 40),   # Brown
     (255, 20, 147),   # Pink
     (128, 128, 128),  # Gray
-    (128, 128, 0)     # Olive
+    (128, 128, 0),    # Olive
+    (0, 0, 128)       # Navy
 ]
 
 
@@ -261,20 +262,26 @@ def main(argv):
             print(f'Added contour {i}')
             contour, actor = imaging(frames[f_num], c_values[i], opacities[i], rgbs[i])
             renderer.AddActor(actor)
-    elif argv[1] == 'showall':
+    elif argv[1] == 'compare':
         # Set contour value and opacity
         try:
             c_value = -int(argv[2])
             opacity = float(argv[3])
-            assert -90 <= c_value <= 0 and 0.0 <= opacity <= 1.0
-            print(f'Showing all plumes with contour value {c_value} and opacity {opacity}')
+            plumes = []
+            
+            for i in range(4, len(argv)):
+                plumes.append(int(argv[i]))
+
+            assert -90 <= c_value <= 0 and 0.0 <= opacity <= 1.0 and all([0 <= p <= 11 for p in plumes])
+            print(f'Showing plumes {plumes} with contour value {c_value} and opacity {opacity}')
         except:
-            print('Invalid values, using defaults c_value=-40, opacity=0.5')
+            print('Invalid values, using defaults c_value=-40, opacity=0.5 for plumes 0 and 1')
+            plumes = [0,1]
             c_value = -40
             opacity = 0.5
 
-        for i in range(len(frames)):
-            print(f'Added frame {i}')
+        for i in plumes:
+            print(f'Added plume {i}')
             contour, actor = imaging(frames[i], c_value, opacity, colors[i])
             renderer.AddActor(actor)
 
