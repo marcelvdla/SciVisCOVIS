@@ -231,9 +231,13 @@ def main(argv):
             c_value = -int(argv[2])
             opacity = float(argv[3])
             set_iters = int(argv[4])
+            assert -90 <= c_value <= 0 and 0 <= opacity <= 1
             print(f'Animating all plumes with contour value {c_value} and opacity {opacity}')
         except:
-            print('Invalid values')
+            print('Invalid values, using defaults c_value=-40, opacity=0.5, iterations=20')
+            c_value = -40
+            opacity = 0.5
+            set_iters = 20
             
         # create initial contour:
         contour, actor = imaging(frames[0], c_value, opacity, [77,153,204])
@@ -254,9 +258,12 @@ def main(argv):
         try:
             c_value = -int(argv[2])
             opacity = float(argv[3])
+            assert -90 <= c_value <= 0 and 0 <= opacity <= 1
             print(f'Showing all plumes with contour value {c_value} and opacity {opacity}')
         except:
-            print('Invalid values')
+            print('Invalid values, using defaults c_value=-40, opacity=0.5')
+            c_value = -40
+            opacity = 0.5
 
         for i in range(len(frames)):
             print(f'Added frame {i}')
