@@ -12,7 +12,7 @@ import re
 
 
 # Colortable for the different plumes in showall
-colors = [
+colors = np.array([
     (230, 25, 75),    # Red
     (60, 180, 75),    # Green
     (0, 130, 200),    # Blue
@@ -25,6 +25,21 @@ colors = [
     (128, 128, 128),  # Gray
     (128, 128, 0),    # Olive
     (0, 0, 128)       # Navy
+])/256
+
+named_colors = [
+    'Red',
+    'Green',
+    'Blue',
+    'Orange',
+    'Purple',
+    'Cyan',
+    'Yellow',
+    'Brown',
+    'Pink',
+    'Gray',
+    'Olive',
+    'Navy'
 ]
 
 
@@ -96,7 +111,7 @@ def imaging(vtk_data, c_value, opacity, rgb):
     return contour, actor
 
 
-def animate(contour, frames, c_value, set_iters, render_window):
+def animate(contour, frames, c_value, set_iters, render_window, times):
     ''' This function animates the different timesteps on a single day
     '''
     for i in range(set_iters):
@@ -106,6 +121,8 @@ def animate(contour, frames, c_value, set_iters, render_window):
         contour.SetValue(0, c_value)
 
         render_window.Render()
+
+        print(f'Showing plume {j} at time {times[j]}')
         time.sleep(2)
         
 
@@ -156,15 +173,17 @@ def main(argv):
     bathy_file = 'data/bathy/covis_bathy_2019b.mat'
     imaging_files = os.listdir("data/fullimaging")
     imaging_files.sort()
+    times = []
 
     # Load data for all times on day
     frames = []
     for f in imaging_files:
         xg, yg, zg, v = load_imaging(f'data/fullimaging/{f}/{f}.mat')
+        time = re.findall("T\d{6}", f)[0][1:]
+        times.append(time)
 
         # Create histogram of backscatter values
         if argv[1] == 'hist':
-            time = re.findall("T\d{6}", f)[0][1:]
             plt.hist(v.flatten(), bins=100, range=[-89,0], alpha=0.4, label=f't = {time}')
         else:
             frames.append(vtk_imaging(xg, yg, zg, v))
@@ -232,7 +251,7 @@ def main(argv):
             c_value = -int(argv[2])
             opacity = float(argv[3])
             set_iters = int(argv[4])
-            assert -90 <= c_value <= 0 and 0 <= opacity <= 1
+            assert -90 <= c_value <= 0 and 0 <= opacity <= 1 
             print(f'Animating all plumes with contour value {c_value} and opacity {opacity}')
         except:
             print('Invalid values, using defaults c_value=-40, opacity=0.5, iterations=20')
@@ -243,7 +262,7 @@ def main(argv):
         # create initial contour:
         contour, actor = imaging(frames[0], c_value, opacity, [77,153,204])
         renderer.AddActor(actor)
-        animate(contour, frames, c_value, set_iters, render_window)
+        animate(contour, frames, c_value, set_iters, render_window, times)
     elif argv[1] == 'show':
         # Variables for different contour values
         c_values = [-60,-50,-40]
@@ -281,7 +300,7 @@ def main(argv):
             opacity = 0.5
 
         for i in plumes:
-            print(f'Added plume {i}')
+            print(f'Added plume {i}, datapoint at time {times[i]} with color {named_colors[i]}')
             contour, actor = imaging(frames[i], c_value, opacity, colors[i])
             renderer.AddActor(actor)
 
