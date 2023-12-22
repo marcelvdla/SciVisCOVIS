@@ -31,13 +31,13 @@ python3 vtk_COVIS.py show num
 ```
 Where num is an integer for the data file, which for the data present has to be between 0 and 11. 
 
-- All datafiles
+- Compare
 
-To show the visualisation of all observations run with:
+To show the visualisation of more then one observation run with:
 ``` shell
-python3 vtk_COVIS.py showall contour opacity
+python3 vtk_COVIS.py compare contour opacity plume_num_1 plume_num_2 
 ```
-Where contour has to be an integer between 0 and 90, opacity a float between 0.0 and 1.0
+Where contour has to be an integer between 0 and 90, opacity a float between 0.0 and 1.0 and plume_num_x the data point you want in the visualisation. This can be any number of datapoints up to all the datapoints present in the data folder (so any value between 0 and 11)
 
 - Animation
 
